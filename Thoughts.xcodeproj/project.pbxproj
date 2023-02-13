@@ -22,6 +22,9 @@
 		4E9BB421299AB176005EE69A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB420299AB176005EE69A /* DatabaseManager.swift */; };
 		4E9BB423299AB1A5005EE69A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB422299AB1A5005EE69A /* AuthManager.swift */; };
 		4E9BB425299AB1DB005EE69A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB424299AB1DB005EE69A /* StorageManager.swift */; };
+		4E9BB42A299AF2BC005EE69A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */; };
+		4E9BB42C299AFE37005EE69A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB42B299AFE37005EE69A /* User.swift */; };
+		4E9BB42E299AFE79005EE69A /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB42D299AFE79005EE69A /* BlogPost.swift */; };
 		E2545AE42781674E589601BF /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		4E9BB420299AB176005EE69A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4E9BB422299AB1A5005EE69A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		4E9BB424299AB1DB005EE69A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E9BB42B299AFE37005EE69A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E9BB42D299AFE79005EE69A /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDED76FA6D9135F931A9FF6D /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
 		EDB5B4041669CD5F2D749425 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 		4E9BB40A299AAD03005EE69A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E9BB42B299AFE37005EE69A /* User.swift */,
+				4E9BB42D299AFE79005EE69A /* BlogPost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9BB3FF299AA59A005EE69A /* Assets.xcassets */,
+				4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */,
 				4E9BB3F6299AA598005EE69A /* AppDelegate.swift */,
 				4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */,
 			);
@@ -179,7 +188,6 @@
 				EDB5B4041669CD5F2D749425 /* Pods-Thoughts.debug.xcconfig */,
 				DDED76FA6D9135F931A9FF6D /* Pods-Thoughts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +253,7 @@
 			files = (
 				4E9BB403299AA59A005EE69A /* LaunchScreen.storyboard in Resources */,
 				4E9BB400299AA59A005EE69A /* Assets.xcassets in Resources */,
+				4E9BB42A299AF2BC005EE69A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9BB42E299AFE79005EE69A /* BlogPost.swift in Sources */,
 				4E9BB3FB299AA598005EE69A /* HomeViewController.swift in Sources */,
 				4E9BB423299AB1A5005EE69A /* AuthManager.swift in Sources */,
 				4E9BB421299AB176005EE69A /* DatabaseManager.swift in Sources */,
 				4E9BB417299AB04A005EE69A /* SignUpViewController.swift in Sources */,
 				4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */,
 				4E9BB415299AB026005EE69A /* SignInViewController.swift in Sources */,
+				4E9BB42C299AFE37005EE69A /* User.swift in Sources */,
 				4E9BB410299AAE7A005EE69A /* ProfileViewController.swift in Sources */,
 				4E9BB41B299AB0A8005EE69A /* CreateNewPostViewController.swift in Sources */,
 				4E9BB41F299AB142005EE69A /* IAPManager.swift in Sources */,
