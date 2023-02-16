@@ -1,0 +1,52 @@
+{
+  "identifier" : "F0793175",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "F2FF2D37",
+      "localizations" : [
+
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "04C301EF",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlock all Thoughts posts",
+              "displayName" : "Premim Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.temporary.Thoughts",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Premium Monthly",
+          "subscriptionGroupID" : "F2FF2D37",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

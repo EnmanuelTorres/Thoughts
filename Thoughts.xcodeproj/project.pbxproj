@@ -25,6 +25,10 @@
 		4E9BB42A299AF2BC005EE69A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */; };
 		4E9BB42C299AFE37005EE69A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB42B299AFE37005EE69A /* User.swift */; };
 		4E9BB42E299AFE79005EE69A /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB42D299AFE79005EE69A /* BlogPost.swift */; };
+		4E9BB477299D746F005EE69A /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB476299D746F005EE69A /* PayWallViewController.swift */; };
+		4E9BB47A299D8147005EE69A /* PayWallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */; };
+		4E9BB47C299D871D005EE69A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB47B299D871D005EE69A /* Extensions.swift */; };
+		4E9BB47E299E86C7005EE69A /* PayWallDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */; };
 		E2545AE42781674E589601BF /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,11 @@
 		4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E9BB42B299AFE37005EE69A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4E9BB42D299AFE79005EE69A /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		4E9BB476299D746F005EE69A /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
+		4E9BB478299D7C5D005EE69A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderView.swift; sourceTree = "<group>"; };
+		4E9BB47B299D871D005EE69A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallDescriptionView.swift; sourceTree = "<group>"; };
 		764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDED76FA6D9135F931A9FF6D /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
 		EDB5B4041669CD5F2D749425 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				4E9BB401299AA59A005EE69A /* LaunchScreen.storyboard */,
+				4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */,
+				4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 		4E9BB40C299AAD35005EE69A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E9BB475299D7440005EE69A /* Other */,
 				4E9BB426299ABED6005EE69A /* Core Tabs */,
 				4E9BB427299ABEF9005EE69A /* Auth */,
 				4E9BB428299ABF2D005EE69A /* Posts */,
@@ -131,6 +143,7 @@
 				4E9BB429299AF2BC005EE69A /* GoogleService-Info.plist */,
 				4E9BB3F6299AA598005EE69A /* AppDelegate.swift */,
 				4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */,
+				4E9BB47B299D871D005EE69A /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -150,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9BB3FA299AA598005EE69A /* HomeViewController.swift */,
+				4E9BB478299D7C5D005EE69A /* Configuration.storekit */,
 				4E9BB40F299AAE7A005EE69A /* ProfileViewController.swift */,
 				4E9BB412299AAF00005EE69A /* TabBarViewController.swift */,
 			);
@@ -172,6 +186,14 @@
 				4E9BB418299AB07F005EE69A /* ViewPostViewController.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		4E9BB475299D7440005EE69A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4E9BB476299D746F005EE69A /* PayWallViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		89788C927E0A036DCDD5F92B /* Frameworks */ = {
@@ -307,9 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9BB42E299AFE79005EE69A /* BlogPost.swift in Sources */,
+				4E9BB47E299E86C7005EE69A /* PayWallDescriptionView.swift in Sources */,
+				4E9BB47C299D871D005EE69A /* Extensions.swift in Sources */,
 				4E9BB3FB299AA598005EE69A /* HomeViewController.swift in Sources */,
 				4E9BB423299AB1A5005EE69A /* AuthManager.swift in Sources */,
 				4E9BB421299AB176005EE69A /* DatabaseManager.swift in Sources */,
+				4E9BB47A299D8147005EE69A /* PayWallHeaderView.swift in Sources */,
 				4E9BB417299AB04A005EE69A /* SignUpViewController.swift in Sources */,
 				4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */,
 				4E9BB415299AB026005EE69A /* SignInViewController.swift in Sources */,
@@ -321,6 +346,7 @@
 				4E9BB3F9299AA598005EE69A /* SceneDelegate.swift in Sources */,
 				4E9BB419299AB07F005EE69A /* ViewPostViewController.swift in Sources */,
 				4E9BB425299AB1DB005EE69A /* StorageManager.swift in Sources */,
+				4E9BB477299D746F005EE69A /* PayWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
