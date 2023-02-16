@@ -55,7 +55,7 @@ final class AuthManager {
         }
     }
     
-    public func singOut(email: String, password: String, completion: (Bool)-> Void) {
+    public func singOut( completion: (Bool)-> Void) {
         do {
             try auth.signOut()
             completion(true)

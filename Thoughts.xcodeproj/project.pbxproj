@@ -29,6 +29,7 @@
 		4E9BB47A299D8147005EE69A /* PayWallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */; };
 		4E9BB47C299D871D005EE69A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB47B299D871D005EE69A /* Extensions.swift */; };
 		4E9BB47E299E86C7005EE69A /* PayWallDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */; };
+		4E9BB480299EA85A005EE69A /* SignInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB47F299EA85A005EE69A /* SignInHeaderView.swift */; };
 		E2545AE42781674E589601BF /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderView.swift; sourceTree = "<group>"; };
 		4E9BB47B299D871D005EE69A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallDescriptionView.swift; sourceTree = "<group>"; };
+		4E9BB47F299EA85A005EE69A /* SignInHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeaderView.swift; sourceTree = "<group>"; };
 		764CE42F1DEFE5B28FC8C16F /* Pods_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDED76FA6D9135F931A9FF6D /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
 		EDB5B4041669CD5F2D749425 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				4E9BB401299AA59A005EE69A /* LaunchScreen.storyboard */,
 				4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */,
 				4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */,
+				4E9BB47F299EA85A005EE69A /* SignInHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4E9BB47A299D8147005EE69A /* PayWallHeaderView.swift in Sources */,
 				4E9BB417299AB04A005EE69A /* SignUpViewController.swift in Sources */,
 				4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */,
+				4E9BB480299EA85A005EE69A /* SignInHeaderView.swift in Sources */,
 				4E9BB415299AB026005EE69A /* SignInViewController.swift in Sources */,
 				4E9BB42C299AFE37005EE69A /* User.swift in Sources */,
 				4E9BB410299AAE7A005EE69A /* ProfileViewController.swift in Sources */,
