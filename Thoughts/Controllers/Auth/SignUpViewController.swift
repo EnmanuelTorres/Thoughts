@@ -109,7 +109,7 @@ class SignUpViewController: UITabBarController {
         AuthManager.share.singUp(email: email, password: password) { [weak self] success in
             if success {
                 //Update database
-                let newUser = User(name: name, email: email, profilePictureUrl: nil)
+                let newUser = User(name: name, email: email, profilePictureRef: nil)
                 DatabaseManager.shared.insert(user: newUser) { inserted in
                     guard inserted else {
                         return
@@ -117,6 +117,8 @@ class SignUpViewController: UITabBarController {
                     
                     UserDefaults.standard.set(name, forKey: "name")
                     UserDefaults.standard.set(email, forKey: "email")
+                    
+                    
                     DispatchQueue.main.async {
                         let vc = TabBarViewController()
                         vc.modalPresentationStyle = .fullScreen
