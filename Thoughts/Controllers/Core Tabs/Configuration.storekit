@@ -24,7 +24,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "4.99",
+          "displayPrice" : "2.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "04C301EF",
@@ -36,7 +36,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.temporary.Thoughts",
+          "productID" : "com.Torres.Thoughts.premium",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Premium Monthly",
           "subscriptionGroupID" : "F2FF2D37",

@@ -22,8 +22,8 @@ class PayWallDescriptionView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 22, weight: .regular)
-        label.numberOfLines = 1
-        label.text = "$4.99 / moth"
+        label.numberOfLines = 3
+        label.text = "$2.99 / moth"
         return label
     }()
     

@@ -79,10 +79,41 @@ class PayWallViewController: UITabBarController {
     
     @objc private func didTapSubscribe(){
         //RevenueCat
+        APIManager.shared.fetchPackages { package in
+            guard let package = package  else {return}
+            APIManager.shared.subscribe(package: package) {[weak self] success in
+                print("Purchase: \(success)")
+                DispatchQueue.main.async {
+                    if success {
+                        self?.dismiss(animated: true)
+                    }else {
+                        let alert = UIAlertController(title: "Subscription Failed",
+                                                      message: "We were unable to complete the transaction",
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                        self?.present(alert, animated: true)
+                    }
+                }
+            }
+        }
     }
     
     @objc private func didTapRestore(){
-        //RevenueCat
+      
+        APIManager.shared.restorePurchases {[weak self] success in
+                print("Restored: \(success)")
+                DispatchQueue.main.async {
+                    if success {
+                        self?.dismiss(animated: true)
+                    }else {
+                        let alert = UIAlertController(title: "Restoration Failed",
+                                                      message: "We were unable to restore the previous transaction",
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                        self?.present(alert, animated: true)
+                    }
+                }
+        }
     }
     
     private func SetUPCloseButton(){

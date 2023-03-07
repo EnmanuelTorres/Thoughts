@@ -5,6 +5,7 @@
 //  Created by ENMANUEL TORRES on 13/02/23.
 //
 
+import Purchases
 import UIKit
 import Firebase
 
@@ -17,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        Purchases.configure(withAPIKey: "appl_tFxQtQtguocDArnvMGkmyZiiZEu")
+       
+        APIManager.shared.getSubscriptionStatus(completion: nil)
         return true
     }
 
