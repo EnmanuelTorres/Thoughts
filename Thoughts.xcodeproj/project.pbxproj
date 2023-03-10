@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E68C43329B6B2DB00D8C441 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68C43229B6B2DB00D8C441 /* StoreKit.framework */; };
+		4E68C43829BA2CF100D8C441 /* PostPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68C43729BA2CF100D8C441 /* PostPreviewTableViewCell.swift */; };
+		4E68C43A29BA2D0F00D8C441 /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68C43929BA2D0F00D8C441 /* PostHeaderTableViewCell.swift */; };
 		4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3F6299AA598005EE69A /* AppDelegate.swift */; };
 		4E9BB3F9299AA598005EE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */; };
 		4E9BB3FB299AA598005EE69A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3FA299AA598005EE69A /* HomeViewController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		4E68C43229B6B2DB00D8C441 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4E68C43729BA2CF100D8C441 /* PostPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewTableViewCell.swift; sourceTree = "<group>"; };
+		4E68C43929BA2D0F00D8C441 /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4E9BB3F3299AA598005EE69A /* Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9BB3F6299AA598005EE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E68C43629BA2CA300D8C441 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4E68C43729BA2CF100D8C441 /* PostPreviewTableViewCell.swift */,
+				4E68C43929BA2D0F00D8C441 /* PostHeaderTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		4E9BB3EA299AA598005EE69A = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		4E9BB40B299AAD14005EE69A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E68C43629BA2CA300D8C441 /* Cells */,
 				4E9BB401299AA59A005EE69A /* LaunchScreen.storyboard */,
 				4E9BB479299D8147005EE69A /* PayWallHeaderView.swift */,
 				4E9BB47D299E86C7005EE69A /* PayWallDescriptionView.swift */,
@@ -343,10 +357,12 @@
 				4E9BB421299AB176005EE69A /* DatabaseManager.swift in Sources */,
 				4E9BB47A299D8147005EE69A /* PayWallHeaderView.swift in Sources */,
 				4E9BB417299AB04A005EE69A /* SignUpViewController.swift in Sources */,
+				4E68C43A29BA2D0F00D8C441 /* PostHeaderTableViewCell.swift in Sources */,
 				4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */,
 				4E9BB480299EA85A005EE69A /* SignInHeaderView.swift in Sources */,
 				4E9BB415299AB026005EE69A /* SignInViewController.swift in Sources */,
 				4E9BB42C299AFE37005EE69A /* User.swift in Sources */,
+				4E68C43829BA2CF100D8C441 /* PostPreviewTableViewCell.swift in Sources */,
 				4E9BB410299AAE7A005EE69A /* ProfileViewController.swift in Sources */,
 				4E9BB41B299AB0A8005EE69A /* CreateNewPostViewController.swift in Sources */,
 				4E9BB41F299AB142005EE69A /* APIManager.swift in Sources */,
