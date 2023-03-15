@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class CreateNewPostViewController: UITabBarController {
+    
+    private let spiner = JGProgressHUD(style: .dark)
     
     // Title field
     private let titleField: UITextField = {
@@ -94,10 +97,13 @@ class CreateNewPostViewController: UITabBarController {
 
     @objc private func didTapCancel(){
         dismiss(animated: true)
+        
     }
     
     @objc private func didTapPost(){
         //Check data and post
+          spiner.show(in: view)
+        print("pase por aqui 3")
         guard let title = titleField.text, let body = textView.text,let headerImage = seletedHeaderImage,
               let email = UserDefaults.standard.string(forKey: "email"),
               !title.trimmingCharacters(in: .whitespaces).isEmpty,
@@ -108,6 +114,7 @@ class CreateNewPostViewController: UITabBarController {
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
             present(alert, animated: true)
+            print("pase por aqui 4")
             return
         }
         
@@ -119,11 +126,15 @@ class CreateNewPostViewController: UITabBarController {
                                                     image: headerImage,
                                                     postId: newPostId) { success in
             guard success else {
+                print("pase por aqui 5")
                 return
             }
-            StorageManager.shared.downloadURLForPostHeader(email: email, postId: newPostId) { url in
+            StorageManager.shared.downloadURLForPostHeader(email: email, postId: newPostId) {[weak self] url in
                 guard let headerUrl = url else {
                     print("Failed to upload url for header")
+                    DispatchQueue.main.async {
+                        HapticsManager.shared.vibrate(for: .error)
+                    }
                     return
                 }
                 //Insert of post info DB
@@ -133,13 +144,19 @@ class CreateNewPostViewController: UITabBarController {
                                     timestamp: Date().timeIntervalSince1970,
                                     headerImageUrl: headerUrl,
                                     text: body)
+               
+                self?.spiner.dismiss()
                 
                 DatabaseManager.shared.insert(blogPost: post, email: email) {[weak self] posted in
                     guard posted else {
                         print("Failed to post new Blog Article")
+                        DispatchQueue.main.async {
+                            HapticsManager.shared.vibrate(for: .error)
+                        }
                         return
                     }
                     DispatchQueue.main.async {
+                        HapticsManager.shared.vibrateForSelection()
                         self?.didTapCancel()
                     }
                 }

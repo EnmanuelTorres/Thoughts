@@ -13,6 +13,24 @@ import StoreKit
 final class APIManager {
     static let shared = APIManager()
     
+    static let formatter = ISO8601DateFormatter()
+    
+    private var postEligibleViewDate : Date? {
+        
+        get {
+            guard let string = UserDefaults.standard.string(forKey: "postEligibleViewDate") else {
+                return nil
+            }
+            return APIManager.formatter.date(from: string)
+        }
+        set (newValue) {
+            guard let date = newValue else {
+                return
+            }
+            let string = APIManager.formatter.string(from: date)
+            UserDefaults.standard.set(string, forKey: "postEligibleViewDate")
+        }
+    }
     
     private init(){}
     
@@ -101,6 +119,32 @@ final class APIManager {
                 UserDefaults.standard.setValue(false, forKey: "premium")
                 completion(false)
             }
+        }
+    }
+}
+
+// MARK: - Track Post Views
+
+extension APIManager {
+    var canViewPost : Bool {
+        if isPremium() {
+            return true
+        }
+        guard let date = postEligibleViewDate else {
+            return true
+        }
+        UserDefaults.standard.set(0, forKey: "post_views")
+        return Date() >= date
+    }
+    
+    public func logPostViewed() {
+        let total = UserDefaults.standard.integer(forKey: "post_views")
+        UserDefaults.standard.set(total + 1, forKey: "post_views")
+       print("total of  taps is: \(total)")
+        
+        if total == 2 {
+            let hour : TimeInterval = 60 * 60
+            postEligibleViewDate = Date().addingTimeInterval(hour * 24)
         }
     }
 }

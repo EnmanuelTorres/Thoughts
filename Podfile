@@ -12,5 +12,5 @@ target 'Thoughts' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'Purchases'
-
+  pod 'JGProgressHUD'
 end

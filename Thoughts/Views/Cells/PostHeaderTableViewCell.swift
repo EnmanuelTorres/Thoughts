@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class PostHeaderTableViewCellViewModel {
     let imageUrl : URL?
     var imageData : Data?
@@ -17,6 +18,8 @@ class PostHeaderTableViewCellViewModel {
 }
 
 class PostHeaderTableViewCell: UITableViewCell {
+    
+   
     
     static let identifier = "PostHeaderTableViewCell"
 
@@ -64,6 +67,7 @@ class PostHeaderTableViewCell: UITableViewCell {
             // Fetch image & cache
             
             let task = URLSession.shared.dataTask(with: url) { [weak self]data, _, _ in
+                
                 guard let data  = data else {
                     return
                 }

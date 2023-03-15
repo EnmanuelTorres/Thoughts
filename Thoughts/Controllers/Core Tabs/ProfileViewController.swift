@@ -167,7 +167,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     DispatchQueue.main.async{
                         UserDefaults.standard.set(nil, forKey: "name")
                         UserDefaults.standard.set(nil, forKey: "email")
-                        
+                        UserDefaults.standard.set(nil, forKey: "premium")
                         let signInVc = SignInViewController()
                         signInVc.navigationItem.largeTitleDisplayMode = .always
                         
@@ -218,10 +218,34 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath : IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = ViewPostViewController(post: posts[indexPath.row])
-        vc.navigationItem.largeTitleDisplayMode = .never
-        vc.title = "Post"
-        navigationController?.pushViewController(vc, animated: true)
+        
+        HapticsManager.shared.vibrateForSelection()
+        
+       
+        var isOwnedByCurrentUser = false
+        if let email = UserDefaults.standard.string(forKey: "email") {
+            isOwnedByCurrentUser = (email == currentEmail)
+        }
+        
+        if !isOwnedByCurrentUser {
+            if APIManager.shared.canViewPost {
+                let vc = ViewPostViewController(post: posts[indexPath.row], isOwnedByCurrentUser: isOwnedByCurrentUser)
+                vc.navigationItem.largeTitleDisplayMode = .never
+                vc.title = "Post"
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            else {
+                let vc = PayWallViewController()
+                present(vc, animated: true)
+            }
+        }
+        else {
+            //Our post
+            let vc = ViewPostViewController(post: posts[indexPath.row], isOwnedByCurrentUser: isOwnedByCurrentUser)
+            vc.navigationItem.largeTitleDisplayMode = .never
+            vc.title = "Post"
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

@@ -45,6 +45,8 @@ final class StorageManager {
             .putData(pngData, metadata: nil) { metadata, error in
                 guard metadata != nil, error == nil else {
                     completion(false)
+                    print("pase por aqui 7")
+                    print(error)
                     return
                 }
                 completion(true)

@@ -3,6 +3,16 @@
     {
       "filename" : "logo.png",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Captura de pantalla 2023-03-14 a la(s) 4.34.46 p. m..png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

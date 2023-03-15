@@ -54,14 +54,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
    
-    
+   
     @objc private func didTapCreate(){
         let vc = CreateNewPostViewController()
         vc.title = "Create Post"
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
     }
-    
+  
     private var posts: [BlogPost] = []
     
     private func fetchAllPosts(){
@@ -97,6 +97,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath : IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        HapticsManager.shared.vibrateForSelection()
+        
+        guard APIManager.shared.canViewPost else {
+            let vc = PayWallViewController()
+            present(vc, animated: true)
+            return
+        }
+        
         let vc = ViewPostViewController(post: posts[indexPath.row])
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Post"

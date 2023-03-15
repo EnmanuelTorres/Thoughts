@@ -10,6 +10,7 @@
 		4E68C43329B6B2DB00D8C441 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68C43229B6B2DB00D8C441 /* StoreKit.framework */; };
 		4E68C43829BA2CF100D8C441 /* PostPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68C43729BA2CF100D8C441 /* PostPreviewTableViewCell.swift */; };
 		4E68C43A29BA2D0F00D8C441 /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68C43929BA2D0F00D8C441 /* PostHeaderTableViewCell.swift */; };
+		4E68C43C29BB873000D8C441 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68C43B29BB873000D8C441 /* HapticsManager.swift */; };
 		4E9BB3F7299AA598005EE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3F6299AA598005EE69A /* AppDelegate.swift */; };
 		4E9BB3F9299AA598005EE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */; };
 		4E9BB3FB299AA598005EE69A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB3FA299AA598005EE69A /* HomeViewController.swift */; };
@@ -40,6 +41,7 @@
 		4E68C43229B6B2DB00D8C441 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4E68C43729BA2CF100D8C441 /* PostPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewTableViewCell.swift; sourceTree = "<group>"; };
 		4E68C43929BA2D0F00D8C441 /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		4E68C43B29BB873000D8C441 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		4E9BB3F3299AA598005EE69A /* Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9BB3F6299AA598005EE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9BB3F8299AA598005EE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				4E9BB420299AB176005EE69A /* DatabaseManager.swift */,
 				4E9BB422299AB1A5005EE69A /* AuthManager.swift */,
 				4E9BB424299AB1DB005EE69A /* StorageManager.swift */,
+				4E68C43B29BB873000D8C441 /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				4E9BB413299AAF00005EE69A /* TabBarViewController.swift in Sources */,
 				4E9BB3F9299AA598005EE69A /* SceneDelegate.swift in Sources */,
 				4E9BB419299AB07F005EE69A /* ViewPostViewController.swift in Sources */,
+				4E68C43C29BB873000D8C441 /* HapticsManager.swift in Sources */,
 				4E9BB425299AB1DB005EE69A /* StorageManager.swift in Sources */,
 				4E9BB477299D746F005EE69A /* PayWallViewController.swift in Sources */,
 			);

@@ -82,9 +82,11 @@ class PostPreviewTableViewCell: UITableViewCell {
             
             let task = URLSession.shared.dataTask(with: url) { [weak self]data, _, _ in
                 guard let data  = data else {
+                    print("pase por aqui 2")
                     return
                 }
                 viewModel.imageData = data
+                print("pase por aqui 1")
                 
                 DispatchQueue.main.async {
                     self?.postImageView.image = UIImage(data: data)
