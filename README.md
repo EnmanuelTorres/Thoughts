@@ -10,7 +10,8 @@ A modern blogging iOS app written in Swift with subscription paywalls powered by
 - Dark Mode Support
 
 ## Content
-![Thoughts](https://user-images.githubusercontent.com/106885120/225460218-8d9da54b-7668-45ab-a323-7c25a7423052.jpeg)
+![Thoughts](https://github.com/EnmanuelTorres/Thoughts/assets/106885120/f23c1662-27a0-443d-88fe-d978add4d501)
+
 
 DEMO 1 | DEMO 2 |
 -------|--------|
